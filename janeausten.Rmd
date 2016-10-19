@@ -1,3 +1,10 @@
+---
+title: "Jane Austen"
+output: html_notebook
+---
+
+
+```{r}
 library(readr)
 library(syuzhet)
 library(magrittr)
@@ -15,10 +22,10 @@ PNP <- raw %>%
 
 sentiments <- PNP %>%
   get_sentiment(method="nrc")
-sentiments = a
 
 sentiments %>%
-  get_percentage_values %>%W
+  get_percentage_values %>%
   plot(main = "Pride and Prejudice", xlab = "Narrative Time", ylab = "Emotion", type="l")
 abline(h=0, col=3, lty=2)
+```
 
